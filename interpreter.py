@@ -4,8 +4,7 @@
 #z is an integer
 #For instance, if the user inputs 1 + 1, your program should output 2.0. Assume that, if y is /, then z will not be 0.
 def main():
-    exp = input("What's the expression? ").split()
-    x, y, z= exp
+    x, y, z = input("What's the expression? ").split()
     x=int(x)
     z=int(z)
 
