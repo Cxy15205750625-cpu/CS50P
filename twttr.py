@@ -3,20 +3,14 @@ def main():
 
 def short():
     shorter=""
-    text=input("Input: ").string()
+    text=input("Input: ")
     for i in text:
-        if i == "a":
-            shorter = "" + i
-        elif i == "e":
-            shorter = "" + i
-        elif i == "i":
-            shorter = "" + i
-        elif i == "o":
-            shorter = "" + i
-        elif i == "u":
-            shorter = "" + i
+        if i.lower() in ["a","e","i","o","u"]:
+            continue
 
-    print(i)
+        shorter += i
+
+    print(shorter)
 
 
 main()
