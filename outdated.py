@@ -15,27 +15,34 @@ MONTHS = {
 
 def main():
     while True:
-        date = input("Date: ").split()
+        date = input("Date: ").strip()
+
         try:
             if "/" in date:
                 x, y, z = date.split("/")
+                month = int(x)
                 day = int(y)
                 year = int(z)
 
-                if not x.isdigit():
-                    month = MONTHS[x]
-                    break
             else:
-                x, y, z = date.split(" ")
+                x, y, z = date.split()
 
                 if not y.endswith(","):
                     continue
+
+                month = MONTHS[x]
                 day = int(y[:-1])
                 year = int(z)
 
-        except ValueError:
-            print("please use the format that 'DD/MM/YY'! ")
+            if not (1 <= month <= 12 and 1 <= day <= 31 and year >= 1):
+                continue
 
-    print("f{month:02}-{day:02}-{year:04}")
+            break
+
+        except (ValueError, KeyError):
+            print("please use the format that 'MM/DD/YY'! ")
+            continue
+
+    print(f"{year:04}-{month:02}-{day:02}")
 
 main()
