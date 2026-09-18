@@ -6,7 +6,9 @@ figlet = Figlet()
 
 if len(sys.argv) == 1:
     font = random.choice(figlet.getFonts())
-    print(figlet.renderText(font))
+    figlet.setFont(font = font)
+    text = input("Input: ")
+    print(figlet.renderText(text))
 
 elif len(sys.argv) == 3:
     option = sys.argv[1]
@@ -22,5 +24,5 @@ elif len(sys.argv) == 3:
         sys.exit("Wrong arguments. ")
 
 else:
-    sys.exit("Too few arguments. ")
+    sys.exit("Wrong number of arguments. ")
 
