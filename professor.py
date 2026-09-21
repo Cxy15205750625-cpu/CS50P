@@ -28,7 +28,7 @@ def main():
 def get_level():
     while True:
         try:
-            integer = int(input("Input: "))
+            integer = int(input("Level: "))
 
             if integer not in (1, 2, 3):
                 raise ValueError
