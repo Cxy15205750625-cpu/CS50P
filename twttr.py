@@ -12,5 +12,5 @@ def short():
 
     print(shorter)
 
-
-main()
+if __name__ == "__main__":
+    main()
