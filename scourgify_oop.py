@@ -35,8 +35,8 @@ def main():
 
                     #Write the changed name to new csv.
                     writer.writerow({
-                        "first": student.first,
-                        "last": student.last,
+                        "first": student.first_name,
+                        "last": student.last_name,
                         "house": student.house
                     })
 
