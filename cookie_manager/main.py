@@ -5,9 +5,9 @@ def main():
     jar = Jar(12)
 
     while True:
-        print(f"\n饼干罐：{jar}")
+        print(f"\n饼干罐:{jar}")
         print(f"数量：{jar.size}/{jar.capacity}")
-        action = input("1 放入，2 取出，q 退出：").strip()
+        action = input("1 放入,2 取出,q 退出：").strip()
 
         if action == "q":
             break
